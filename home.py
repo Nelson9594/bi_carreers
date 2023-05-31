@@ -114,7 +114,7 @@ st.text("")
 st.text("")
 
 
-st.caption('Nombre de projet de recrutement classé par région')
+st.caption("L'Île-de-France est la région avec le plus grand nombre de projets de recrutement en France, suivie par Auvergne-Rhône-Alpes et Nouvelle-Aquitaine. Les régions Occitanie et Provence-Alpes-Côte d'Azur complètent le top 5.")
 
 column_bmo = ['Nom de la Région', 'Nombre de projet de recrutement']
 column_selected = new_data[column_bmo]
@@ -128,7 +128,7 @@ st.text("")
 st.text("")
 
 
-st.caption('Top 5 des régions comptant le plus de projet de recrutement en France')
+st.markdown("L'Île-de-France, Auvergne-Rhône-Alpes, et Nouvelle-Aquitaine sont les régions les plus actives en termes de projets de recrutement en France. Elles bénéficient d'une concentration d'entreprises et d'activités économiques importantes. La demande de recrutement est également significative en Occitanie et en Provence-Alpes-Côte d'Azur, avec des secteurs clés tels que l'aérospatial, la technologie et le tourisme.")
 
 somme_par_region_asc = somme_par_region.sort_values(by='Nombre de projet de recrutement', ascending=False)
 top_regions = somme_par_region_asc.head(5)
@@ -140,7 +140,12 @@ st.text("")
 st.text("")
 
 
-st.caption('Projets globaux')
+st.markdown("Ces données fournissent un aperçu des projets de recrutement à l'échelle nationale, en mettant en évidence les régions avec le plus grand nombre total de projets de recrutement, les projets de recrutement jugés difficiles et les projets de recrutement saisonniers. Cette information peut être utilisée pour évaluer les défis spécifiques liés au recrutement dans différentes régions de France.")
+st.markdown("Par ailleurs, il est intéressant de noter qu'il existe des difficultés de recrutement significatives dans les grandes régions de France. Cela indique que trouver des candidats qualifiés et compétents pour ces postes est un défi majeur. Les raisons de ces difficultés peuvent varier, notamment en fonction de la demande du marché du travail, de la disponibilité de compétences spécifiques dans certaines régions et d'autres facteurs socio-économiques.")
+
+st.text("")
+st.text("")
+st.text("")
 
 columns_pr = ['Nom de la Région', 'Nombre de projet de recrutement', 'Nombre de projet de recrutement jugés difficile', 'Nombre de projet de recrutement saisonniers']
 columns_pr_selected = new_data[columns_pr]
@@ -160,7 +165,11 @@ st.text("")
 st.text("")
 st.text("")
 
-st.caption('Top 30 des régions avec le plus de projet de recrutement en pourcentage')
+st.markdown("Effectivement, en examinant le top 15 des régions avec le plus de projets de recrutement en pourcentage, on constate que même la région avec le pourcentage le plus élevé ne représente qu'une part relativement faible de l'ensemble des projets de recrutement en cours en France. Avec seulement **:red[16%]** de tous les projets de recrutement, il est clair qu'il existe une répartition géographique diversifiée des opportunités d'emploi à travers le pays.")
+
+st.text("")
+st.text("")
+st.text("")
 
 pourcentage_par_region = somme_par_region_asc / 2002597 * 100
 print(somme_par_region_asc)
@@ -176,7 +185,7 @@ st.text("")
 
 st.markdown('<h5>Conclusion</h5>', unsafe_allow_html=True)
 
-st.markdown('<p>Nous pouvons en cocnlure que ...</p>', unsafe_allow_html=True)
+st.markdown("Nous pouvons en conlure que l'analyse des projets de recrutement en France met en évidence plusieurs points clés.<br>Premièrement, l'Île-de-France se distingue en tant que région avec le plus grand nombre de projets de recrutement, ce qui témoigne de son importance économique et de son attractivité pour les entreprises.<br>Deuxièmement, on observe une certaine concentration des projets de recrutement dans les régions Auvergne-Rhône-Alpes, Nouvelle-Aquitaine, Occitanie et Provence-Alpes-Côte d'Azur, ce qui peut être lié à leur dynamisme économique et à la présence d'industries spécifiques.<br>Troisièmement, la diversité des projets de recrutement dans différentes régions indique des besoins variés en termes de compétences et de profils recherchés.", unsafe_allow_html=True)
 
 st.text("")
 st.text("")
