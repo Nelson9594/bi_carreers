@@ -10,9 +10,24 @@ from matplotlib.cm import get_cmap
 import geopandas as gpd
 import pydeck as pdk
 import subprocess
+import importlib
 
-# Installer les packages requis depuis requirements.txt
-subprocess.check_call(['pip', 'install', '-r', 'requirements.txt'])
+# Vérifier si les bibliothèques sont déjà installées
+libraries = ['streamlit', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'openpyxl', 'geopandas', 'pydeck']
+missing_libraries = []
+
+for library in libraries:
+    try:
+        importlib.import_module(library)
+    except ImportError:
+        missing_libraries.append(library)
+
+# Si des bibliothèques sont manquantes, installer les packages requis depuis requirements.txt
+if missing_libraries:
+    print("Installation des packages requis...")
+    subprocess.check_call(['pip', 'install', '-r', 'requirements.txt'])
+    print("Installation terminée.")
+
 
 
 # Nom de fichier local à charger si l'URL n'est pas disponible
