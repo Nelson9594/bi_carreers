@@ -9,6 +9,11 @@ import numpy as np
 from matplotlib.cm import get_cmap
 import geopandas as gpd
 import pydeck as pdk
+import subprocess
+
+# Installer les packages requis depuis requirements.txt
+subprocess.check_call(['pip', 'install', '-r', 'requirements.txt'])
+
 
 # Nom de fichier local à charger si l'URL n'est pas disponible
 filename = "/Users/nelson/Desktop/BI/data/Base_open_data_23.xlsx"
